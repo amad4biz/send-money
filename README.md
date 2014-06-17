@@ -9,4 +9,4 @@ send-money
 2. `npm install`
 
 3. to test, simple run: `grunt` (There is only one task registered.)
-- please make sure the app is running before running the tests. `node app.js` or `supervisor app.js`
+..* please make sure the app is running before running the tests. `node app.js` or `supervisor app.js`
