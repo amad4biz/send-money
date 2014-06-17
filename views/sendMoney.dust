@@ -1,0 +1,51 @@
+{>"shared/base"/}
+
+{<pageHeader}
+    Send Money
+{/pageHeader}
+
+{<pageScript}
+    <script src="/js/sendMoney.js"></script>
+{/pageScript}
+
+{<bodyContent}
+    <form action id="send-money">
+        <ul>
+            <li>
+                <span class="text-label">to:</span>
+                <input type="text" id="recipient" placeholder="to:" />
+            </li>
+            <li>
+                <label id="symbol-label">$</label>
+                <input type="text" id="amount" placeholder="amount:" value="0" />
+                <select class="currency-dropdown">
+                    {#countries}
+                        <option value="{name}" data-symbol={symbol}>{name}</option>{~n}
+                    {/countries}
+                </select>
+            </li>
+            <li>
+                <textarea id="message" placeholder="message (optional)"></textarea>
+            </li>
+            <li>
+            <li>
+                <p>What's this payment for?</p>
+                <ol id="money-purpose">
+                    <li class="checked">
+                        <label for="for-others">I'm sending money to family or friends</label>
+                        <input checked="checked" class="purpose" name="purpose" id="for-others" type="radio" value="others">
+                    </li>
+                    <li>
+                        <label for="for-self">I'm paying for goods or services</label>
+                        <input class="purpose" name="purpose" id="for-self" type="radio" value="self">
+                    </li>
+                </ol>
+
+            </li>
+        </ul>
+    </form>
+{/bodyContent}
+{<pageFooter}
+    <li><input class="button clear" type="button" value="Clear" /></li>
+    <li><input class="button" type="submit" value="Next" /></li>
+{/pageFooter}

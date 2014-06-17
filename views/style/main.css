@@ -1,0 +1,249 @@
+/* SHARED */
+
+html * {
+  box-sizing:border-box;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: #4b3314;
+  margin: 0;
+  color: #fff;
+  text-align: center;
+  line-height: 2em;
+}
+.page {
+  position: relative;
+  text-align: center;
+  height: 100%;
+  min-height: 720px;
+}
+.page ul, .page ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.bodyContent {
+  padding: 70px 0;
+  height: 100%;
+  background: #f2e9e1;
+  overflow: hidden;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: #4b3314;
+}
+
+.footer .controls li {
+  display: inline-block;
+  width: 30%;
+  margin: 10px 5%;
+  height: 50px;
+}
+
+.footer .controls .button {
+  padding: 10px 0;
+  margin: 0;
+}
+
+.controls .button {
+  display: block;
+  color: #424242;
+  margin: 10% auto;
+  padding: 40px 0;
+  font-size: 1.2em;
+  line-height: 1;
+  height: 100%;
+  width: 90%;
+  border-radius: 5px;
+  text-decoration: none;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0, #FFFFFF),
+    color-stop(1, #BDBDBD)
+  );
+  background-image: -o-linear-gradient(bottom, #FFFFFF 0%, #BDBDBD 100%);
+  background-image: -moz-linear-gradient(bottom, #FFFFFF 0%, #BDBDBD 100%);
+  background-image: -webkit-linear-gradient(bottom, #FFFFFF 0%, #BDBDBD 100%);
+  background-image: -ms-linear-gradient(bottom, #FFFFFF 0%, #BDBDBD 100%);
+  background-image: linear-gradient(to bottom, #FFFFFF 0%, #BDBDBD 100%);
+}
+
+.currency-dropdown {
+  width: 70px;
+}
+
+/* SEND MONEY */
+
+.sendMoney #send-money .text-label {
+  display: none;
+}
+
+.sendMoney #send-money #amount {
+  padding-left: 60px;
+}
+
+.sendMoney #send-money #symbol-label {
+  position: absolute;
+  top: 29px;
+  font-size: 1.5em;
+  left: 20px;
+}
+
+.sendMoney #send-money p {
+  margin: 10px 0;
+  text-align: left;
+  font-size: 1.5em;
+}
+
+.sendMoney #send-money input {
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  border-radius: 6px;
+  margin: 10px 0;
+  font-size: 1.5em;
+  padding: 0 20px;
+}
+
+.sendMoney #send-money #money-purpose li {
+  width: 100%;
+}
+
+.sendMoney #send-money #money-purpose label {
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  font-size: 1.5em;
+  padding: 15px 20px;
+  margin: 0 auto;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  transition: border linear .2s,box-shadow linear .2s;
+  border: 1px solid #ccc;
+  text-align: left;
+  position: relative;
+}
+
+.sendMoney #send-money #money-purpose li:first-child label {
+  border-radius: 6px 6px 0 0;
+  border-bottom: none;
+}
+
+.sendMoney #send-money #money-purpose li:last-child label {
+  border-radius: 0 0 6px 6px;
+  border-top: none;
+}
+
+.sendMoney #send-money #money-purpose li.checked label {
+  background: rgba(0,0,0,0.1);
+}
+
+.sendMoney #send-money #money-purpose li.checked label:after {
+  display: block;
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background: url(/img/glyphicons-halflings.png) transparent 182px 0;
+}
+
+.sendMoney #send-money .purpose {
+  display: none;
+}
+
+.sendMoney #send-money ul {
+  text-align: center;
+}
+
+.sendMoney #send-money ul li {
+  position: relative;
+  width: 90%;
+  margin: auto;
+}
+
+.sendMoney #send-money .currency-dropdown {
+  position: absolute;
+  top: 25px;
+  right: 15px;
+  z-index: 1;
+}
+
+.sendMoney #send-money textarea {
+  margin: 10px 0;
+  width: 100%;
+  height: 200px;
+  border-radius: 6px;
+  font-size: 1.5em;
+  padding: 10px 20px;
+}
+
+/* ACTIVITY */
+.activity .transaction {
+  margin: 0;
+  padding: 20px 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.activity li.transaction:hover {
+  background: rgba(255,255,255,0.8);
+}
+
+.activity .transaction:nth-child(even) {
+  background: rgba(255,255,255,0.4);
+}
+
+.activity .column {
+  display: inline-block;
+  width: 35%;
+}
+
+.activity .column.first {
+  width: 16%;
+}
+
+.activity .column.last {
+  width: 13%;
+}
+
+.activity .details {
+  -webkit-transition: height 0.6s;
+  transition: height 0.6s;
+  height: 0;
+  overflow: hidden;
+}
+
+.activity .details p {
+  text-align: left;
+  font-size: 1.5em;
+  padding: 19px 10px;
+  color: #999;
+}
+
+.activity .show-details .details {
+  height: 50px;
+}
+
+.activity .column.amount-column {
+  padding: 0 10px 0 0;
+  text-align: right;
+}
+

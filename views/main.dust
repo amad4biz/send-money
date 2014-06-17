@@ -1,0 +1,16 @@
+{>"shared/base"/}
+
+{<pageHeader}
+    What are we doing?
+{/pageHeader}
+
+{<bodyContent}
+    <ul class="controls">
+      <li>
+        <a class="button" href="sendMoney">Send Money</a>
+      </li>
+      <li>
+        <a class="button" href="activity">View Transaction History</a>
+      </li>
+    </ul>
+{/bodyContent}

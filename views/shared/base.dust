@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html class="{page}">
+  <head>
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="/style/bootstrap.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/numeral.js"></script>
+  </head>
+  <body>
+    <div class="page">
+      <h1 class="header">
+        {+pageHeader}PayPal{/pageHeader}
+      </h1>
+      <div class="bodyContent">
+        {+bodyContent/}
+      </div>
+      <div class="footer">
+        <ul class="controls">
+          {+pageFooter/}
+        </ul>
+      </div>
+    </div>
+    {+pageScript/}
+  </body>
+</html>

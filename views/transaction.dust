@@ -1,0 +1,37 @@
+{>"shared/base"/}
+
+{<pageHeader}
+    Transaction History
+{/pageHeader}
+
+{<pageScript}
+    <script src="/js/transaction.js"></script>
+{/pageScript}
+
+{<bodyContent}
+    <ul>
+        {#transactions}
+            <li class="transaction">
+                <div class="column first">{date}</div>
+                <div class="column">{recipient}</div>
+                <div class="column amount-column">
+                    <span class="symbol">{symbol}</span>
+                    <span class="amount" data-currency="{currency}">{amount}</span>
+                </div>
+                <div class="column last">
+                    <select class="currency-dropdown">
+                        {#countries}
+                            <option {@eq key="EUR" value=name}selected="true"{/eq} value="{name}" data-symbol={symbol}>{name}</option>{~n}
+                        {/countries}
+                    </select>
+                </div>
+                <section class="details">
+                    <p>{message}</p>
+                </section>
+            </li>
+        {/transactions}
+    </ul>
+{/bodyContent}
+{<pageFooter}
+    <li><input class="button back" type="button" value="Back" /></li>
+{/pageFooter}
