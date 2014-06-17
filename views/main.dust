@@ -7,10 +7,10 @@
 {<bodyContent}
     <ul class="controls">
       <li>
-        <a class="button" href="sendMoney">Send Money</a>
+        <a class="button" href="paypal/sendMoney">Send Money</a>
       </li>
       <li>
-        <a class="button" href="activity">View Transaction History</a>
+        <a class="button" href="paypal/activity">View Transaction History</a>
       </li>
     </ul>
 {/bodyContent}
