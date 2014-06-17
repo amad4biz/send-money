@@ -21,13 +21,15 @@
                 <div class="column last">
                     <select class="currency-dropdown">
                         {#countries}
-                            <option {@eq key="EUR" value=name}selected="true"{/eq} value="{name}" data-symbol={symbol}>{name}</option>{~n}
+                            <option value="{name}" data-symbol={symbol}>{name}</option>{~n}
                         {/countries}
                     </select>
                 </div>
-                <section class="details">
-                    <p>{message}</p>
-                </section>
+                {?message}
+                    <section class="details">
+                        <p>{message}</p>
+                    </section>
+                {/message}
             </li>
         {/transactions}
     </ul>
